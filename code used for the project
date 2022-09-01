@@ -1,0 +1,32 @@
+user_Pswd= input("enter a password (it should contain alphabets, numbers, special characters and should be 10 characters long or more): ")
+re_enter = input("enter the password again: ")
+
+special_char = '[@_!#$%^&*()<>?/\|}{~:]'
+
+
+def mushrooms():
+    
+    if user_Pswd == re_enter: 
+        print("passwords matched!")
+        if user_Pswd.isalnum:
+            if len(user_Pswd) >=10: 
+                def stonger():
+                    user_Pswd.split()
+                    c=0
+                    for i in  range(len(user_Pswd)):
+                        if user_Pswd[i] in special_char:
+                            c+=1
+                            if c:
+                                print("password not strong enough")
+                        else:
+                            print("password is accepted")
+                        
+            else:
+                print("password is not strong enough try again: ")
+                    
+        else:
+            print("try a stronger password")
+            
+    else:
+        print("passwords donot match, try again")
+        mushrooms()
